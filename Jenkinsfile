@@ -30,15 +30,14 @@ pipeline {
             echo 'Archiving'
             archiveArtifacts artifacts: '**/*.war'
                 }
-            }     
+            } 
+
     stage('Test') {
         steps {
             sh 'mvn -s pom.xml test'
         }
     }
 
-
-    
     stage('Checkstyle Analysis') {
         steps {
             sh 'mvn -s pom.xml checkstyle:checkstyle'
