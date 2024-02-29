@@ -36,6 +36,8 @@ pipeline {
             sh 'mvn -s pom.xml test'
         }
     }
+
+
     
     stage('Checkstyle Analysis') {
         steps {
