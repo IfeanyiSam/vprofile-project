@@ -31,17 +31,18 @@ pipeline {
             archiveArtifacts artifacts: '**/*.war'
                 }
             } 
-
+    stages { 
         stage('Test') {
             steps {
                 sh 'mvn -s pom.xml test'
+            }
         }
     }
-
+    stages {
         stage('Checkstyle Analysis') {
             steps {
                sh 'mvn -s pom.xml checkstyle:checkstyle'
+            }
         }
     }
-
 }
