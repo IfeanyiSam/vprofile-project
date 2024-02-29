@@ -24,5 +24,11 @@ pipeline {
             }
             
         }
-    }        
+    }   
+    post {
+        success {
+            echo 'Archiving'
+            archiveArtifacts artifacts: '**/*.war'
+                }
+            }     
 }
