@@ -81,7 +81,7 @@ pipeline {
                 nexusArtifactUploader(
                   nexusVersion: 'nexus3',
                   protocol: 'http',
-                  nexusUrl: "${3.144.223.54}:${8081}",  
+                  nexusUrl: "${'3.144.223.54'}:${'8081'}",  
                   groupId: 'QA',
                   version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                   repository: "${RELEASE_REPO}",
