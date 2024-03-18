@@ -97,7 +97,7 @@ pipeline {
         }
     }
     post {
-        always{
+        success{
             echo 'Slack Notifications'
             slackSend channel: '#cicd',
                 color: COLOR_MAP[currentBuild.currentResult],
