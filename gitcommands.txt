@@ -1,0 +1,73 @@
+git clone <githubrepo-URL> --- This command will clone your remote repo to your local machine.
+git checkout -b <branch-name> --- This command is used to create and switch to a new branch.
+   ##scenario--- When a new feature, bug fix, or infrastructure change is required, creating a new branch to isolate changes. DevOps engineers often use branches for:
+
+       Creating new features
+       Fixing production issues 
+       Writing or updating Infrastructure-as-Code (IaC)
+git pull origin <branch-name> ---  This command is used to pull the changes from remote repo to the local machine.
+    ##scenario --- Before staring any work,pulling the latest changes from the remote repo ensure your local branch is upto date
+                   with the team's latest commits.
+
+git status --- Checking the status of changes done in the project.
+    ##scenario--- Regularly checking the status while working to see which files are modified, added, or deleted before committing changes. 
+                  It helps in tracking what needs to be staged or excluded.
+
+git add <filename> (or) git add . --- Staging the changes from working to stage.
+    ##scenario --- After making changes to configuration files (e.g., Dockerfiles, Kubernetes manifests, Terraform scripts), 
+                  DevOps engineers stage those changes before committing them to the branch
+                  . 
+git commit -m <Message describing the changes> --- Commiting the changes 
+     ##scenario ---Commit changes after successful code or configuration updates. It’s a good practice to have meaningful commit messages 
+     that describe what was changed (e.g., "Updated Jenkinsfile to support new build process").
+
+git push origin <branch-name> --- Pushing the changes from local to remote repo.
+    ##scenario ---After committing changes locally, pushing them to the remote repository makes those changes available to others, 
+    including for CI/CD pipelines to pick them up.   
+
+git merge <branch-name> --- Merging the branches 
+    ##scenario-- After completing the development or changes in a feature branch, merging those changes into the main branch or a staging branch.
+    Example Use Case: Merging changes from the feature/new-ci-pipeline branch into the main branch.
+
+git merge <branch-name> -- Resolving merge conflicts 
+    ##scenario-- When there are conflicts between branches, Git pauses the merge, and 
+    DevOps engineers must manually resolve conflicts, edit conflicting files, stage, and commit the resolutions.         
+
+git rebase <branch-name>-- Rebasing the branch
+    ##scenario--- To ensure that the feature branch is up to date with the latest changes from the main branch without creating a merge commit. 
+    This helps maintain a cleaner history, especially in production or release branches.
+
+git log (or) git log --online --- Viewing commit history
+    ##scenario-- Reviewing commit history to understand changes made by other team members or to investigate changes when something breaks in production.
+
+git diff -- Checking differneces between two commits 
+    ##scenario-- To view changes that have been made but not yet committed. This helps in code reviews and debugging configuration files or code before committing.
+
+git tag <tag-name> (or) git push origin <tag-name> -- Tagging releases
+    ##scenario--  When releasing a new version of software or infrastructure, tagging the commit with a version (e.g., v1.0.0). \
+    Tags help mark points in the Git history for releases, making rollback easier in case of failure.
+
+git reset <file> -- Unstage changes 
+    ##scenario-- If an incorrect change was made or committed, 
+    DevOps engineers may need to reset the staging area or revert a commit to undo changes. This helps to maintain stability in production environments.    
+
+git revert <commit hash>-- Revert a commit 
+    ##scenario-- If an incorrect change was made or committed, 
+    DevOps engineers may need to reset the staging area or revert a commit to undo changes. This helps to maintain stability in production environments.    
+
+git cherry-pick <commit hash> -- Cherry-picking specific commits 
+    ##scenario-- When you want to pick specific commits from one branch and apply them to another without merging the whole branch. This is useful when deploying hotfixes from a development branch to production.
+
+git remote -v -- Checking remote URLs
+    ##scenario-- To verify the remote repository’s URL, especially when managing multiple remotes like production, staging, or dev repositories.
+
+git fetch -- Fetching changes from remote repository 
+    ##scenario-- To retrieve the latest changes from the remote repository without merging them into your working branch. This is useful when you want to inspect changes before applying them.
+
+git stash apply -- Stashing changes
+    ##scenario--  When you need to save your uncommitted changes temporarily (e.g., switching to another branch for an urgent task), you can stash those changes and apply them later.
+
+git rm <file> -- Removing files
+    ##scenario-- When you need to remove files from the repository and from your working directory. This can be used when cleaning up configuration files or obsolete scripts.
+    
+               

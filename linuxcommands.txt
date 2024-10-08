@@ -1,0 +1,79 @@
+.pem --- Privacy Enhanced Mail
+.ppk --- PuTTY Private Key
+.txt --- text file
+.c --- C language extension
+.java --- Java extension
+.sh --- shell
+.go -- go 
+.php --- php
+.html -- html 
+.xml -- xm file
+.json-- java script object notaion
+.zip--- zip file
+.jar -- java archive file 
+cat /etc/os-release --- which os
+cat /etc/passwd --- linux users data
+cat /etc/groups --- linux user groups data
+cat /etc/system-release --- OS info
+sudo su --- If you want to became a root user
+cd / ---root directory
+cd -- change directory
+  cd <path of the file/directory>
+cat -- It will display the file content
+ls --- Listing the file and directories
+   ls -a ---Lists all files in a directory, including hidden files and directories 
+   ls -R --- Lists all files, sorted by file size\
+   ls -l-l: Also known as "long listing", this command shows details about the Linux file that are important to the Linux system 
+   ls -t: Sorts files by modification time
+   ls -r: Sorts files in reverse order 
+   ls -s: Prints the allocated size of each file, in blocks
+   ls -lrt:  It will display the data in the time stamp
+pwd --- present working directory
+cd - --> Undo you will go back to the previous stage
+touch -- It will create new empty file
+  touch <file name>
+mkdir -- It will create new empty directory
+  mkdir <directory name>
+man -- to know the commands list and usage
+  man <ls> --
+useradd -- To create the new user
+  sudo useradd <username> -- To add new user
+  sudo userdel <username> -- To delete user 
+  sudo passwd <username> -- To set the password to the user
+groupadd -- To add the new group
+  sudo groupadd <groupname>
+  sudo groupdel <groupname>
+sudo usermod-g <groupname> <username> -- adding a user to the primary group
+mv -- To move or rename the file/directory
+  mv <sourcepath> <destinationpath>
+  mv <oldname> <newname>
+cp -- Copy
+  cp test.txt testing
+diff -- It will display the difference between the two files
+echo - 
+echo "devops" >> -- append the data from existing data
+echo "devops" > -- redirect the data (or) replace the data from existing data
+read (r) --- 4
+writr (w) -- 2
+execute (x) -1
+rw- (user) r--(group) r--(others)
+420 (6)    400 (4)    400(4)
+
+rwx    r-x    r-x
+421(6) 401(5) 401 (5)
+chmod -- The chmod command (short for "change mode") in Linux is used to change file or directory permissions            
+chmod -R -- Recursive
+  chmod -R 777 <filename> - Your'e going to give all permissiosn to the all users (user,group & others)
+chown --- The chown command in Linux is used to change the ownership of files and directories.
+   sudo chown <username>:<groupname> <directoryname>
+   sudo chown <username>:<groupname> folders --- Changing folders permissions
+   sudo chown -R <username>:<groupname> folders -- Changing folder and its sub-folders permissions
+cat cd /etc/cpuinfo
+cat cd /etc/meminfo
+free -m It will show 
+free -g
+df -kh -- To display server details  
+history --- It will give history of the commands
+cat devops.txt --- To konw the content in the file
+ech0 " " > <filename> --- It is going to flush (or) empty the file
+                  
